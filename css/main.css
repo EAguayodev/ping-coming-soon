@@ -1,5 +1,23 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  /* Primary */
+
+--Blue: hsl(223, 87%, 63%);
+
+  /* Secondary */
+
+--Pale-Blue: hsl(223, 100%, 88%);
+--Light-Red: hsl(354, 100%, 66%);
+
+  /* Neutral */
+
+--Gray: hsl(0, 0%, 59%);
+--Very-Dark-Blue: hsl(209, 33%, 12%);
 }
 
 body {
@@ -16,24 +34,24 @@ main {
 }
 
 h1 {
-  color: hsl(0, 0%, 59%);
-  font-size: 40px;
+  color: var(--Gray);
+  font-size: 2.5rem;
   font-weight: 300;
 }
 
 h1 span {
-  color: hsl(209, 33%, 12%);
+  color: var(--Very-Dark-Blue);
   font-weight: 700;
 }
 
 button {
-  background: hsl(223, 87%, 63%);
+  background: var(--Blue);
   border: none;
   border-radius: 50px;
-  box-shadow: 0px 5px 5px hsl(233, 100%, 88%);
+  box-shadow: 0px 5px 5px var(--Pale-Blue);
   color: #fff;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
   margin-left: 2rem;
   padding: 10px 60px;
   height: 50px;
@@ -42,14 +60,13 @@ button {
 form {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-left: 9rem;
   position: relative;
   padding: 20px 60px;
 }
 
 form small {
-  color: hsl(354, 100%, 66%);
+  color: var(--Light-Red);
   display: none;
   font-style: italic;
   position: relative;
@@ -62,11 +79,11 @@ button:hover {
 }
 
 input {
-  border: 1px solid hsl(233, 100%, 88%);
+  border: 1px solid var(--Pale-Blue);
   border-radius: 50px;
-  color: hsl(0, 0%, 59%);
+  color: var(--Gray);
   font-family: "Libre Franklin", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-bottom: 20px;
   padding: 15px 45px;
   width: 425px;
@@ -74,11 +91,11 @@ input {
 }
 
 input::placeholder {
-  color: hsl(0, 0%, 59%);
+  color: var(--Gray);
 }
 
 input.error {
-  border-color: hsl(354, 100%, 66%);
+  border-color: var(--Light-Red);
 }
 
 input.success {
@@ -86,7 +103,7 @@ input.success {
 }
 
 input.error::placeholder {
-  color: hsl(354, 100%, 66%);
+  color: var(--Light-Red);
 }
 
 .dashboard {
@@ -99,7 +116,6 @@ input.error::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
   list-style-type: none;
 }
 
@@ -107,10 +123,10 @@ input.error::placeholder {
   margin: 10px;
 }
 
-.social li a {
+.social li a{
   border: 1px solid hsl(0, 4%, 95%);
   border-radius: 50%;
-  color: hsl(223, 87%, 63%);
+  color: var(--Blue);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -122,16 +138,16 @@ input.error::placeholder {
 
 .social li a:hover {
   border: 1px solid hsl(0, 12%, 92%);
-  background: hsl(223, 87%, 63%);
+  background: var(--Blue);
   border-color: hsl(228, 88%, 68%);
   color: #fff;
 }
 
 footer p {
-  color: hsl(0, 0%, 59%);
+  color: var(--Gray);
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .form-left {
     flex: 1;
   }
